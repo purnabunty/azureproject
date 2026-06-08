@@ -1,0 +1,15 @@
+{
+	"name": "spotifiyproject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "095264fd-def0-45e0-888e-7cfb15091687",
+		"tenantId": "d69444a3-d833-4da5-ba80-fd42f86c5d8a"
+	}
+}
