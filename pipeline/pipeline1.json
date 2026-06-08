@@ -29,7 +29,7 @@
 				}
 			},
 			{
-				"name": "maximumdate",
+				"name": "maxdate",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -65,7 +65,7 @@
 						]
 					},
 					{
-						"activity": "maximumdate",
+						"activity": "maxdate",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -83,7 +83,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from DimUser where updated_at > '@{activity('lastdate').output.value[0].lastdate}' and updated_at <='@{activity('maximumdate').output.value[0].maximumdate}'",
+							"value": "select * from DimUser where updated_at > '@{activity('lastdate').output.value[0].lastdate}' and updated_at <='@{activity('maxdate').output.value[0].maximumdate}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
